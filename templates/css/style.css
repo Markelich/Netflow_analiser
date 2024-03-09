@@ -1,0 +1,139 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+}
+
+.logo {
+    font-size: 30px;
+    margin: 20px;
+    font-family: Segoe UI;
+    font-weight: 400;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px 0 0;
+
+}
+
+.menu>a {
+    height: 18px;
+    margin: 0 15px;
+    font-size: 20px;
+    color: white;
+    font-family: Segoe UI;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.inputblock {
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputblock>button{
+    padding: 10px;
+    border-radius: 18px;
+    background: #72CCC5;
+    font-family: Segoe UI;
+    font-size: 12px;
+
+}
+
+.input {
+    margin: 0 20px 0 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: black solid 1px;
+    font-family: Segoe UI;
+}
+
+.list-block{
+    display: flex;
+    flex-direction: row
+    font-family: Segoe UI;
+    justify-content: flex-start;
+
+}
+
+.list-item{
+    display: flex;
+    margin: 0 0 3px 0;
+    padding: 3px;
+    background: white;
+    border: #5F5F5F solid 1px;
+    min-width: 450px;
+    border-radius: 5px;
+    font-family: Segoe UI;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4px 14px;
+}
+
+.ip {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.byte {
+    font-size: 15px;
+    margin: 0 20px;
+}
+
+.pkts {
+    font-size: 15px;
+    ma
+}
+
+.list-item:hover{
+    background: #EBEBEB;
+
+}
