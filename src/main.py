@@ -25,8 +25,10 @@ def get_users_list(request: Request):
 
 @router.get("/user/{user_addres}")
 def get_users_list(user_addres):
-    user_info = df.to_dict('records')
-    return [user for user in user_info if user.get("DstIP") == user_addres]
+    list_of_serveses = df.groupby(['SrcIP', 'DstIP']).sum()[['Pkts', 'Octets']].sort_values(by='Octets', ascending=False)   # список сервисов обрщаемых конкретным пользователей + общий pkts и oktets для каждого
+    list_of_serveses['Octets'] = list_of_serveses['Octets'].apply(lambda x: round(x, 2))
+    list_of_serveses = list_of_serveses.reset_index().to_dict('records')
+    return [user for user in list_of_serveses if user.get("DstIP") == user_addres]
 
 
 
